@@ -73,6 +73,7 @@ jobs:
         run: Rename-Item playlunky_nightly.zip playlunky_nightly_${{ steps.artifacts.outputs.hash }}.zip
 
       - name: Create release
+        if: false
         uses: marvinpinto/action-automatic-releases@v1.1.0
         env:
           ACTIONS_ALLOW_UNSECURE_COMMANDS: "true"
