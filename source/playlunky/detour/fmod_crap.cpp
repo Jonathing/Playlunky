@@ -455,6 +455,8 @@ struct DetourFmodSystemLoadBankMemory
                             fmt::format_to(this_sample_name, "{}", i);
                         }
 
+                        LogInfo("Found sample: {}", this_sample_name);
+
                         const std::size_t data_offset = sample_datas_offset + offset;
                         samples.push_back(FsbFile::Sample{
                             .Name = this_sample_name,
